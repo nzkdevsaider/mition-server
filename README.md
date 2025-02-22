@@ -1,15 +1,31 @@
-# Elysia with Bun runtime
+# Mition API - Crear y asociar notas con IA
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
+Mition API permite almacenar notas rápidas, analizarlas y asociarlas a un grupo de notas con inteligencia artificial para mejorar la productividad y organización.
+
+**Este es un proyecto en versión ALPHA.**
+
+## Pre-requisitos
+- [Una API KEY de Anthropic](https://console.anthropic.com/)
+- [Bun](https://bun.sh/)
+
+## Desarrollo
+
+- Inicializa la base de datos
 ```bash
-bun create elysia ./elysia-example
+bunx prisma init
+
+```
+- Genera el esquema
+```bash
+bunx prisma generate 
 ```
 
-## Development
-To start the development server run:
+- Crear la migración inicial
 ```bash
-bun run dev
+bunx prisma migrate dev --name init
 ```
 
-Open http://localhost:3000/ with your browser to see the result.
+- Inicia el servidor
+```bash
+bun run src/index
+```
