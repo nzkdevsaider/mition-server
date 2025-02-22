@@ -8,6 +8,11 @@ Mition API permite almacenar notas rápidas, analizarlas y asociarlas a un grupo
 - [Una API KEY de Anthropic](https://console.anthropic.com/)
 - [Bun](https://bun.sh/)
 
+```
+PORT=3000
+CLAUDE_API_KEY=tu_api_key_aqui
+```
+
 ## Desarrollo
 
 - Inicializa la base de datos
